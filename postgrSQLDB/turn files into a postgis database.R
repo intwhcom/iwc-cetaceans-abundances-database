@@ -3,9 +3,11 @@ library(RPostgres)  # PostgreSQL connection
 library(DBI)        # Database interface
 library(readxl)     # Reading Excel files
 library(sf)         # Spatial data handling
+library(tidyverse)
 sf::sf_use_s2(FALSE)
 #source functions:
 source("read_excel_tables.R")
+source("junction tables.R")
 
 # Database connection details
 db_name <- "iwcabundances"
@@ -118,8 +120,8 @@ for (i in c('correction', 'method', 'survey', 'trials')) {
 #the time series tables
 source("timeseries_tables.R")
 tstabs <- tstables(abundances)
-dbWriteTable(conn, "timeseries", tsttabs$timeseries, row.names = FALSE, append = TRUE)
-dbWriteTable(conn, "timeseries1", tsttabs$junction_table, row.names = FALSE, append = TRUE)
+dbWriteTable(conn, "timeseries", tstabs$timeseries, row.names = FALSE, append = TRUE)
+dbWriteTable(conn, "timeseries1", tstabs$junction_table, row.names = FALSE, append = TRUE)
 # Close the database connection
 dbDisconnect(conn)
 

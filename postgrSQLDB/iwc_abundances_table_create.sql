@@ -58,7 +58,7 @@ CREATE TABLE iwc_abundances_table (
     category_code varchar(4)  NULL,
     evaluation_extent int  NULL,
     subareas_id int  NOT NULL,
-    timeseries_code varchar(10)  NULL,
+    timeseries_code varchar(250)  NULL,
     CONSTRAINT iwc_abundances_table_pk PRIMARY KEY (id)
 );
 
@@ -161,9 +161,9 @@ CREATE TABLE timeseries (
     id int  NOT NULL,
     code varchar(10)  NOT NULL,
     estimate int  NOT NULL,
-    cv int  NULL,
-    se int  NULL,
-    sd int  NULL,
+    cv real  NULL,
+    se real  NULL,
+    sd real  NULL,
     year int  NOT NULL,
     lci int  NULL,
     uci int  NULL,

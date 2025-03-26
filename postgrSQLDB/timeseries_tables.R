@@ -21,7 +21,7 @@ read_time_sheets <- function(file_path = "abundances-NP.xlsx") {
 }
 #load the data:
 dt <- list(); for (i in c("abundances-NP.xlsx","abundances-NA.xlsx","abundances-SH.xlsx")) dt[[i]] <- read_time_sheets(file_path = i)
-ddf <- as.data.frame(do.call(rbind,dt))
+ddf <- as.data.frame(do.call(rbind,dt)) %>% mutate(id = row_number())
 
 #the junction table has the iwc_abundances_table_id and the timeseries_id
 abu <- abundances %>% select(id,timeseries_code) %>%
