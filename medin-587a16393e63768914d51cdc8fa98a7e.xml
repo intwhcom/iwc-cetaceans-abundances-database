@@ -1,0 +1,3386 @@
+<?xml version="1.0"?>
+<gmd:MD_Metadata xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gmd="http://www.isotc211.org/2005/gmd">
+ <!--File Identifier (M)-->
+ <gmd:fileIdentifier>
+  <gco:CharacterString>587a16393e63768914d51cdc8fa98a7e</gco:CharacterString>
+ </gmd:fileIdentifier>
+ <!--Element 29 Metadata language (M)-->
+ <gmd:language>
+  <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">English</gmd:LanguageCode>
+ </gmd:language>
+ <!--Element 4 Resource type (M)-->
+ <gmd:hierarchyLevel>
+  <gmd:MD_ScopeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+ </gmd:hierarchyLevel>
+ <!--Sub element 22.4 Metadata point of contact (M)-->
+ <gmd:contact>
+  <gmd:CI_ResponsibleParty>
+   <gmd:individualName>
+    <gco:CharacterString>Isidora Katara</gco:CharacterString>
+   </gmd:individualName>
+   <gmd:organisationName>
+    <gco:CharacterString>International Whaling Commission (IWC)</gco:CharacterString>
+   </gmd:organisationName>
+   <gmd:contactInfo>
+    <gmd:CI_Contact>
+     <gmd:address>
+      <gmd:CI_Address>
+       <gmd:electronicMailAddress>
+        <gco:CharacterString>isidora.katara@iwc.int</gco:CharacterString>
+       </gmd:electronicMailAddress>
+      </gmd:CI_Address>
+     </gmd:address>
+    </gmd:CI_Contact>
+   </gmd:contactInfo>
+   <gmd:role>
+    <gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+   </gmd:role>
+  </gmd:CI_ResponsibleParty>
+ </gmd:contact>
+ <!--Element 26 Metadata date (M)-->
+ <gmd:dateStamp>
+  <gco:Date>2025-03-27</gco:Date>
+ </gmd:dateStamp>
+ <!--Element 27 - Metadata standard name (M)-->
+ <gmd:metadataStandardName>
+  <gmx:Anchor xlink:type="simple" xlink:href="http://vocab.nerc.ac.uk/collection/M25/current/MEDIN/">MEDIN</gmx:Anchor>
+ </gmd:metadataStandardName>
+ <!--Element 28 - Metadata standard version (M)-->
+ <gmd:metadataStandardVersion>
+  <gco:CharacterString>3.1.2</gco:CharacterString>
+ </gmd:metadataStandardVersion>
+ <!--Element 15 Spatial reference system (M)-->
+ <gmd:referenceSystemInfo>
+  <gmd:MD_ReferenceSystem>
+   <gmd:referenceSystemIdentifier>
+    <gmd:RS_Identifier>
+     <gmd:authority>
+      <gmd:CI_Citation>
+       <gmd:title>
+        <gco:CharacterString>EPSG Geodetic Parameter Registry</gco:CharacterString>
+       </gmd:title>
+       <gmd:date>
+        <gmd:CI_Date>
+         <gmd:date>
+          <gco:Date>2021-01-06</gco:Date>
+         </gmd:date>
+         <gmd:dateType>
+          <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+         </gmd:dateType>
+        </gmd:CI_Date>
+       </gmd:date>
+      </gmd:CI_Citation>
+     </gmd:authority>
+     <gmd:code>
+      <gmx:Anchor xlink:href="https://www.opengis.net/def/crs/EPSG/9.9.1/4326">WGS 84</gmx:Anchor>
+     </gmd:code>
+    </gmd:RS_Identifier>
+   </gmd:referenceSystemIdentifier>
+  </gmd:MD_ReferenceSystem>
+ </gmd:referenceSystemInfo>
+ <gmd:identificationInfo>
+  <gmd:MD_DataIdentification>
+   <gmd:citation>
+    <gmd:CI_Citation>
+     <!-- 1 Resource title (M) -->
+     <gmd:title>
+      <gco:CharacterString>IWC tables of estimates of abundances</gco:CharacterString>
+     </gmd:title>
+     <!-- 16.1 Date of Publication (M) -->
+     <gmd:date>
+      <gmd:CI_Date>
+       <gmd:date>
+        <gco:Date>2025-03-27</gco:Date>
+       </gmd:date>
+       <gmd:dateType>
+        <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+       </gmd:dateType>
+      </gmd:CI_Date>
+     </gmd:date>
+     <!-- 16.2 Date of Revision (M) -->
+     <gmd:date>
+      <gmd:CI_Date>
+       <gmd:date>
+        <gco:Date>2025-03-26</gco:Date>
+       </gmd:date>
+       <gmd:dateType>
+        <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+       </gmd:dateType>
+      </gmd:CI_Date>
+     </gmd:date>
+     <!-- 6 Unique resource identifier (C) -->
+     <gmd:identifier>
+      <gmd:RS_Identifier>
+       <gmd:code>
+        <gco:CharacterString>iwcabundancestable</gco:CharacterString>
+       </gmd:code>
+      </gmd:RS_Identifier>
+     </gmd:identifier>
+    </gmd:CI_Citation>
+   </gmd:citation>
+   <!-- 3 Resource abstract (M) -->
+   <gmd:abstract>
+    <gco:CharacterString>Whales play a critical role in marine ecosystems, yet their conservation and management require accurate and accessible global abundance and distribution data. This is a high-resolution dataset of whale abundance estimates, compiled from diverse sources, including systematic surveys, ecological models, and historical records. Each record is linked to spatial polygons representing the presumed area of occupancy, forming a geodatabase that facilitates spatially explicit analyses.
+     The aim of the tables of Accepted Abundance Estimates is (i) to collate information in a consistent way on abundance estimates accepted by the Scientific Committee for various purposes and (ii) to provide a simplified table of abundance estimates suitable as a broad overview for the Commission and the public.  See IWC 2014 (JCRM 15 suppl. p416-7) for further details on the objectives. The dataset originated from efforts to support stock assessments for the International Whaling Commission (IWC). Initially an ad hoc compilation, the dataset evolved through the formal review process developed by the IWC Scientific Committee&#x2019;s Sub-Committee on Abundance Estimates, Stock Status, and International Databases (ASI). The dataset has since been restructured and enhanced to include a spatial component, enabling advanced visualisation and integration with spatial management tools.
+     While not yet comprehensive, this dataset is designed to be a live resource, updated with new abundance estimates as they become available. An RShiny application has also been developed to enhance accessibility, allowing users to visualise and explore the data interactively.
+     This dataset provides a valuable resource for researchers, conservation practitioners, and policymakers. It supports ecological modelling, habitat use studies, and marine management strategies. It offers a foundation for addressing key questions in marine biodiversity conservation, assessing anthropogenic impacts, and informing international efforts to protect whale populations under changing environmental conditions.</gco:CharacterString>
+    </gmd:abstract>
+    <!-- Element 22 Responsible Party (M) -->
+    <!-- Sub element 22.5 Owner (M) (Element 22 Responsible Party (M)) -->
+    <gmd:pointOfContact>
+     <gmd:CI_ResponsibleParty>
+      <gmd:organisationName>
+       <gco:CharacterString>International Whaling Commission (IWC)</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:positionName>
+       <gco:CharacterString>Department of Statistics and Modeling</gco:CharacterString>
+      </gmd:positionName>
+      <gmd:contactInfo>
+       <gmd:CI_Contact>
+        <gmd:address>
+         <gmd:CI_Address>
+          <gmd:electronicMailAddress>
+           <gco:CharacterString>statistics@iwc.int</gco:CharacterString>
+          </gmd:electronicMailAddress>
+         </gmd:CI_Address>
+        </gmd:address>
+       </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+       <gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="owner">owner</gmd:CI_RoleCode>
+      </gmd:role>
+     </gmd:CI_ResponsibleParty>
+    </gmd:pointOfContact>
+    <!-- Sub element 22.2 Custodian (M) (Element 22 Responsible Party (M)) -->
+    <gmd:pointOfContact>
+     <gmd:CI_ResponsibleParty>
+      <gmd:individualName>
+       <gco:CharacterString>Isidora Katara</gco:CharacterString>
+      </gmd:individualName>
+      <gmd:organisationName>
+       <gco:CharacterString>International Whaling Commission (IWC)</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:positionName>
+       <gco:CharacterString>Lead of Modelling and Statistics</gco:CharacterString>
+      </gmd:positionName>
+      <gmd:contactInfo>
+       <gmd:CI_Contact>
+        <gmd:address>
+         <gmd:CI_Address>
+          <gmd:electronicMailAddress>
+           <gco:CharacterString>isidora.katara@iwc.int</gco:CharacterString>
+          </gmd:electronicMailAddress>
+         </gmd:CI_Address>
+        </gmd:address>
+       </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+       <gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+      </gmd:role>
+     </gmd:CI_ResponsibleParty>
+    </gmd:pointOfContact>
+    <!-- Sub element 22.1 Originator (M) (Element 22 Responsible Party (M)) -->
+    <gmd:pointOfContact>
+     <gmd:CI_ResponsibleParty>
+      <gmd:individualName>
+       <gco:CharacterString>Cherry Allison</gco:CharacterString>
+      </gmd:individualName>
+      <gmd:organisationName>
+       <gco:CharacterString>Internatoinal Whaling Commission (IWC)</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:positionName>
+       <gco:CharacterString>Head of Statistics and Modeling (Retired)</gco:CharacterString>
+      </gmd:positionName>
+      <gmd:contactInfo>
+       <gmd:CI_Contact>
+        <gmd:address>
+         <gmd:CI_Address>
+          <gmd:electronicMailAddress>
+           <gco:CharacterString>statistics@iwc.int</gco:CharacterString>
+          </gmd:electronicMailAddress>
+         </gmd:CI_Address>
+        </gmd:address>
+       </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+       <gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+      </gmd:role>
+     </gmd:CI_ResponsibleParty>
+    </gmd:pointOfContact>
+    <!-- Sub element 22.3 Distributor (M) (Element 22 Responsible Party (M)) -->
+    <gmd:pointOfContact>
+     <gmd:CI_ResponsibleParty>
+      <gmd:organisationName>
+       <gco:CharacterString>International Whaling Commission (IWC)</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:positionName>
+       <gco:CharacterString>Department of Statistics and Modeling</gco:CharacterString>
+      </gmd:positionName>
+      <gmd:contactInfo>
+       <gmd:CI_Contact>
+        <gmd:address>
+         <gmd:CI_Address>
+          <gmd:electronicMailAddress>
+           <gco:CharacterString>statistics@iwc.int</gco:CharacterString>
+          </gmd:electronicMailAddress>
+         </gmd:CI_Address>
+        </gmd:address>
+       </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+       <gmd:CI_RoleCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="distributor">distributor</gmd:CI_RoleCode>
+      </gmd:role>
+     </gmd:CI_ResponsibleParty>
+    </gmd:pointOfContact>
+    <!--Element 24 - Frequency of update (C)-->
+    <gmd:resourceMaintenance>
+     <gmd:MD_MaintenanceInformation>
+      <gmd:maintenanceAndUpdateFrequency>
+       <gmd:MD_MaintenanceFrequencyCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="annually">annually</gmd:MD_MaintenanceFrequencyCode>
+      </gmd:maintenanceAndUpdateFrequency>
+     </gmd:MD_MaintenanceInformation>
+    </gmd:resourceMaintenance>
+    <!--Element 11 - Keywords (M)-->
+    <gmd:descriptiveKeywords>
+     <gmd:MD_Keywords>
+      <gmd:keyword>
+       <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/N01/current/NDGO0001/">Marine Environmental Data and Information Network</gmx:Anchor>
+      </gmd:keyword>
+      <gmd:thesaurusName>
+       <gmd:CI_Citation>
+        <gmd:title>
+         <gco:CharacterString>MEDIN metadata record availability</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+         <gmd:CI_Date>
+          <gmd:date>
+           <gco:Date>2025-03-27</gco:Date>
+          </gmd:date>
+          <gmd:dateType>
+           <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+          </gmd:dateType>
+         </gmd:CI_Date>
+        </gmd:date>
+       </gmd:CI_Citation>
+      </gmd:thesaurusName>
+     </gmd:MD_Keywords>
+    </gmd:descriptiveKeywords>
+    <gmd:descriptiveKeywords>
+     <gmd:MD_Keywords>
+      <gmd:keyword>
+       <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/P22/current/32/">Species distribution</gmx:Anchor>
+      </gmd:keyword>
+      <gmd:thesaurusName>
+       <gmd:CI_Citation>
+        <gmd:title>
+         <gco:CharacterString>GEMET - INSPIRE themes, version 1.0</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+         <gmd:CI_Date>
+          <gmd:date>
+           <gco:Date>2021-09-28</gco:Date>
+          </gmd:date>
+          <gmd:dateType>
+           <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+          </gmd:dateType>
+         </gmd:CI_Date>
+        </gmd:date>
+       </gmd:CI_Citation>
+      </gmd:thesaurusName>
+     </gmd:MD_Keywords>
+    </gmd:descriptiveKeywords>
+    <gmd:descriptiveKeywords>
+     <gmd:MD_Keywords>
+      <gmd:keyword>
+       <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/P02/current/CETA/">Cetacean abundance</gmx:Anchor>
+      </gmd:keyword>
+      <gmd:thesaurusName>
+       <gmd:CI_Citation>
+        <gmd:title>
+         <gco:CharacterString>SeaDataNet Parameter Discovery Vocabulary</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+         <gmd:CI_Date>
+          <gmd:date>
+           <gco:Date>2021-09-28</gco:Date>
+          </gmd:date>
+          <gmd:dateType>
+           <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+          </gmd:dateType>
+         </gmd:CI_Date>
+        </gmd:date>
+       </gmd:CI_Citation>
+      </gmd:thesaurusName>
+     </gmd:MD_Keywords>
+    </gmd:descriptiveKeywords>
+    <!--Element 20 Limitations on public access (M)-->
+    <gmd:resourceConstraints>
+     <gmd:MD_LegalConstraints>
+      <!--Element 20.1 Access Constraints (M)-->
+      <gmd:accessConstraints>
+       <gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+      </gmd:accessConstraints>
+      <!--Element 20.2 Other Constraints (M)-->
+      <gmd:otherConstraints>
+       <gco:CharacterString>Data can only be used for scientific and educational purposes. A description of those purposes should be given when the data are requested</gco:CharacterString>
+      </gmd:otherConstraints>
+     </gmd:MD_LegalConstraints>
+    </gmd:resourceConstraints>
+    <!--Element 21 Conditions applying for access and use (M)-->
+    <gmd:resourceConstraints>
+     <gmd:MD_LegalConstraints>
+      <!-- Element 21.1 Use Constraints (M) -->
+      <gmd:useConstraints>
+       <gmd:MD_RestrictionCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
+      </gmd:useConstraints>
+      <!-- Element 21.2 Other Constraints (M) -->
+      <gmd:otherConstraints>
+       <gco:CharacterString>Data need to be requested through email to statistics.iwc.int</gco:CharacterString>
+      </gmd:otherConstraints>
+      <gmd:otherConstraints>
+       <gco:CharacterString>Usage licence: Creative Commons Attribution-Non Commercial-No Derivatives 4.0 International.
+        This License Allows:
+        &#x2705; Attribution (BY) &#x2013; Users must give credit to the original creator.
+       </gco:CharacterString>
+      </gmd:otherConstraints>
+     </gmd:MD_LegalConstraints>
+    </gmd:resourceConstraints>
+    <!--Element 32 Spatial representation type (C)-->
+    <gmd:spatialRepresentationType>
+     <gmd:MD_SpatialRepresentationTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector"/>
+    </gmd:spatialRepresentationType>
+    <!--Element 18 Spatial resolution (C)-->
+    <gmd:spatialResolution>
+     <gmd:MD_Resolution>
+      <gmd:distance>
+       <gco:Distance uom="urn:ogc:def:uom:EPSG::9001">1000</gco:Distance>
+      </gmd:distance>
+     </gmd:MD_Resolution>
+    </gmd:spatialResolution>
+    <!-- 8 Resource languages (C) -->
+    <gmd:language>
+     <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">English</gmd:LanguageCode>
+    </gmd:language>
+    <!-- Element 33 Character encoding (C) -->
+    <gmd:characterSet>
+      <gmd:MD_CharacterSetCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</gmd:MD_CharacterSetCode>
+    </gmd:characterSet>
+    <!-- 9 Topic category (C) -->
+    <gmd:topicCategory>
+     <gmd:MD_TopicCategoryCode>biota</gmd:MD_TopicCategoryCode>
+    </gmd:topicCategory>
+    <gmd:topicCategory>
+     <gmd:MD_TopicCategoryCode>oceans</gmd:MD_TopicCategoryCode>
+    </gmd:topicCategory>
+    <!-- 13 Extent (O) -->
+    <gmd:extent>
+     <gmd:EX_Extent>
+      <!--  12 Geographic bounding box (C)  -->
+      <gmd:geographicElement>
+       <gmd:EX_GeographicBoundingBox>
+        <gmd:westBoundLongitude>
+         <gco:Decimal>-179.0000</gco:Decimal>
+        </gmd:westBoundLongitude>
+        <gmd:eastBoundLongitude>
+         <gco:Decimal>179.0000</gco:Decimal>
+        </gmd:eastBoundLongitude>
+        <gmd:southBoundLatitude>
+         <gco:Decimal>-89.0000</gco:Decimal>
+        </gmd:southBoundLatitude>
+        <gmd:northBoundLatitude>
+         <gco:Decimal>89.0000</gco:Decimal>
+        </gmd:northBoundLatitude>
+       </gmd:EX_GeographicBoundingBox>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Adriatic Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Aegean Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Alboran Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Andaman Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Arabian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Arafura Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Arctic Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Baffin Bay</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Balearic Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bali Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Baltic Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Banda Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Barents Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bass Strait</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bay of Bengal</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bay of Biscay</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bay of Fundy</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Beaufort Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bering Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bismarck Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Black Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Bristol Channel</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Caribbean Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Celebes Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Celtic Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Ceram Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Chukchi Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Coastal Waters of Southeast Alaska and British Columbia</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Coral Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Davis Strait</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">East China Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">East Siberian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">English Channel</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Flores Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Great Australian Bight</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Greenland Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Aden</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Alaska</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Aqaba</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Bothnia</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of California</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Finland</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Guinea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Mexico</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Oman</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Riga</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of St. Lawrence</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Suez</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Gulf of Thailand</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Halmahera Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Hudson Bay</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Hudson Strait</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Iceland Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Indian Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Inner Seas off the West Coast of Scotland</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Ionian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Irish Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Japan Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Jawa Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Kara Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Kattegat</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Labrador Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Lakshadweep Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Laptev Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Ligurian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Lincoln Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Malacca Strait</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Mediterranean Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Mediterranean Sea, Eastern Basin</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Mediterranean Sea, Western Basin</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Molucca Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Mozambique Channel</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">North Atlantic Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">North Pacific Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">North Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Northwestern Passages</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Norwegian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Persian Gulf</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Philippine Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Red Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Rio de la Plata</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Sawu Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Sea of Azov</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Sea of Marmara</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Sea of Okhotsk</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Selat Makasar</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Seto Naikai</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Singapore Strait</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Skagerrak</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Solomon Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">South Atlantic Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">South China Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">South Pacific Ocean</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Strait of Gibraltar</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Sulu Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Tasman Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Teluk Bone</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Teluk Tomini</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Timor Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Tyrrhenian Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">White Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVox salt and freshwater body gazetteer</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/C19/current/">Yellow Sea</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+      <gmd:temporalElement>
+       <gmd:EX_TemporalExtent>
+        <gmd:extent>
+         <gml:TimePeriod gml:id="MEDIN_de92d4c8-9211-42f2-a310-2f966d413f42">
+          <gml:beginPosition>1968-04-01</gml:beginPosition>
+          <gml:endPosition>2024-01-01</gml:endPosition>
+         </gml:TimePeriod>
+        </gmd:extent>
+       </gmd:EX_TemporalExtent>
+      </gmd:temporalElement>
+      <gmd:geographicElement>
+       <gmd:EX_GeographicDescription>
+        <gmd:geographicIdentifier>
+         <gmd:MD_Identifier>
+          <gmd:authority>
+           <gmd:CI_Citation>
+            <gmd:title>
+             <gco:CharacterString>SeaVoX Vertical Co-ordinate Coverages</gco:CharacterString>
+            </gmd:title>
+            <gmd:date>
+             <gmd:CI_Date>
+              <gmd:date>
+               <gco:Date>2021-01-06</gco:Date>
+              </gmd:date>
+              <gmd:dateType>
+               <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+              </gmd:dateType>
+             </gmd:CI_Date>
+            </gmd:date>
+           </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+           <gmx:Anchor xlink:href="http://vocab.nerc.ac.uk/collection/L13/current/U1">water column</gmx:Anchor>
+          </gmd:code>
+         </gmd:MD_Identifier>
+        </gmd:geographicIdentifier>
+       </gmd:EX_GeographicDescription>
+      </gmd:geographicElement>
+     </gmd:EX_Extent>
+    </gmd:extent>
+    <!-- Element 19 Additional information (O) -->
+   </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+  <!--Element 5 - Resource locator (C)-->
+  <gmd:distributionInfo>
+   <gmd:MD_Distribution>
+    <gmd:distributionFormat>
+     <gmd:MD_Format>
+      <gmd:name>
+       <gmx:Anchor xlink:type="simple" xlink:href="http://vocab.nerc.ac.uk/collection/M01/current/DB">Database</gmx:Anchor>
+      </gmd:name>
+      <gmd:version>
+       <gco:CharacterString>1</gco:CharacterString>
+      </gmd:version>
+     </gmd:MD_Format>
+    </gmd:distributionFormat>
+    <gmd:distributionFormat>
+     <gmd:MD_Format>
+      <gmd:name>
+       <gmx:Anchor xlink:type="simple" xlink:href="http://vocab.nerc.ac.uk/collection/M01/current/GIS">Geographic Information System</gmx:Anchor>
+      </gmd:name>
+      <gmd:version>
+       <gco:CharacterString>1</gco:CharacterString>
+      </gmd:version>
+     </gmd:MD_Format>
+    </gmd:distributionFormat>
+    <gmd:transferOptions>
+     <gmd:MD_DigitalTransferOptions>
+      <gmd:onLine>
+       <gmd:CI_OnlineResource>
+        <gmd:linkage>
+         <gmd:URL>https://iwc.int/about-whales/estimate</gmd:URL>
+        </gmd:linkage>
+        <gmd:name>
+         <gco:CharacterString>estimates of current population size</gco:CharacterString>
+        </gmd:name>
+        <gmd:description>
+         <gco:CharacterString>A link to the web service or dataset</gco:CharacterString>
+        </gmd:description>
+       </gmd:CI_OnlineResource>
+      </gmd:onLine>
+     </gmd:MD_DigitalTransferOptions>
+    </gmd:transferOptions>
+   </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+  <!-- 25 Conformity (C) -->
+  <gmd:dataQualityInfo>
+   <gmd:DQ_DataQuality>
+    <gmd:scope>
+     <gmd:DQ_Scope>
+      <gmd:level>
+       <gmd:MD_ScopeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+      </gmd:level>
+     </gmd:DQ_Scope>
+    </gmd:scope>
+    <gmd:report>
+     <gmd:DQ_DomainConsistency>
+      <gmd:result>
+       <gmd:DQ_ConformanceResult>
+        <gmd:specification>
+         <gmd:CI_Citation>
+          <gmd:title>
+           <gco:CharacterString>Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gco:CharacterString>
+          </gmd:title>
+          <gmd:date>
+           <gmd:CI_Date>
+            <gmd:date>
+             <gco:Date>2010-12-08</gco:Date>
+            </gmd:date>
+            <gmd:dateType>
+             <gmd:CI_DateTypeCode codeList="https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+            </gmd:dateType>
+           </gmd:CI_Date>
+          </gmd:date>
+         </gmd:CI_Citation>
+        </gmd:specification>
+        <gmd:explanation>
+         <gco:CharacterString>to be evaluated</gco:CharacterString>
+        </gmd:explanation>
+        <gmd:pass gco:nilReason="unknown"/>
+       </gmd:DQ_ConformanceResult>
+      </gmd:result>
+     </gmd:DQ_DomainConsistency>
+    </gmd:report>
+    <!-- 17 Lineage (C) -->
+    <gmd:lineage>
+     <gmd:LI_Lineage>
+      <gmd:statement>
+       <gco:CharacterString>The IWC Abundance Tables serve as a centralised repository for whale abundance estimates and a comprehensive resource designed to consolidate evaluated whale abundance estimates, supporting the work of the IWC Scientific Committee (SC). The collation process involves the systematic collection and documentation of abundance estimates, along with related information and review outcomes, ensuring that the data are standardised, traceable, and fit for scientific and management purposes.
+        Sampling Description: The data collation process involves gathering abundance estimates submitted through working papers or external documents to the IWC SC, standardising their accompanying metadata, and incorporating the outcomes of rigorous review processes conducted by the Abundance Steering Group (ASG) and Sub-committee on Abundance Estimates, Stock Status, and International Cruises (ASI) groups. The collation ensures that all abundance estimates are traceable and their traits are organised by adhering to a transparent and consistent process. </gco:CharacterString>
+       </gmd:statement>
+      </gmd:LI_Lineage>
+     </gmd:lineage>
+    </gmd:DQ_DataQuality>
+   </gmd:dataQualityInfo>
+  </gmd:MD_Metadata>
