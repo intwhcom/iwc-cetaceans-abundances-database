@@ -1,4 +1,4 @@
-#R function that reads an Excel file, selects specific columns for each sheet, and writes a new Excel file while preserving special characters (Scandinavian & English).
+# R function that reads an Excel file, selects specific columns for each sheet, and writes a new Excel file while preserving special characters (Scandinavian & English). ####
 
 library(readxl)
 library(writexl)
@@ -6,7 +6,7 @@ library(dplyr)
 
 #Define the Function
 
-filter_excel_sheets <- function(input_file = "C:\\Users\\IsidoraKatara\\OneDrive - International Whaling Commission\\Abundance-Tabs&Refs\\Abund-Masters/NA/abundances-NA.xlsx", output_file = "C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/abundances tables db/db/abundances-NA.xlsx") {
+filter_excel_sheets <- function(input_file = "C:\\Users\\IsidoraKatara\\OneDrive - International Whaling Commission\\Abundance-Tabs&Refs\\Abund-Masters/NA/abundances-NA.xlsx", output_file = "C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/abundances tables db/db/abundances-NA.xlsx", output_csv = "C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/Extras/abundances-viewer/view-abundances-whales/NAcombined.csv", output_refs = "C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/Extras/abundances-viewer/view-abundances-whales/NAreferences.csv") {
   
   # define the vectors of sheets and columns
   maincolumns = c('id',	'regions_code', 'species_code',	'subareas_subarea',	'category_code',	'evaluation_extent',	'trials_usage',	'year',	'startyear',	'endyear',	'method_code',	'correction_code',	'estimate',	'cv',	'se',	'cvav',	'lci',	'uci',	'references_ref',	'notes',	'survey_programme', 'pl',	'pu',	'season',	'gnull',	'areacoverage',	'sd',	'cvcalc',	'dateadded',	'datemodified',	'timeseries_code')
@@ -68,6 +68,14 @@ filter_excel_sheets <- function(input_file = "C:\\Users\\IsidoraKatara\\OneDrive
     filtered_data[[sheet]] <- df
   }
   
+  #select the data sheets and turn them into a CSV file
+  csv1 <- as.data.frame(do.call(rbind,filtered_data[intersect(names(filtered_data),species_keys)]))
+  write.csv(csv1, file = output_csv)
+  
+  #select the reference sheet and write to a cvs file
+  csv2 <- as.data.frame(filtered_data["references"])
+  write.csv(csv2, file = output_refs)
+  
   # Write the selected columns to a new Excel file
   write_xlsx(filtered_data, output_file)
   
@@ -76,5 +84,6 @@ filter_excel_sheets <- function(input_file = "C:\\Users\\IsidoraKatara\\OneDrive
 
 #### run for all the files ####
 for (i in c('SH','NP','NA')){
-  filter_excel_sheets(input_file = paste0("C:\\Users\\IsidoraKatara\\OneDrive - International Whaling Commission\\Abundance-Tabs&Refs\\Abund-Masters/",i,"/abundances-",i,".xlsx"), output_file = paste0("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/abundances tables db/db/abundances-",i,".xlsx"))
+  filter_excel_sheets(input_file = paste0("C:\\Users\\IsidoraKatara\\OneDrive - International Whaling Commission\\Abundance-Tabs&Refs\\Abund-Masters/",i,"/abundances-",i,".xlsx"), output_file = paste0("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/abundances tables db/db/abundances-",i,".xlsx"), output_csv = paste0("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/Extras/abundances-viewer/view-abundances-whales/",i,"combined.csv"), output_refs = paste0("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs&Refs/Extras/abundances-viewer/view-abundances-whales/",i,"references.csv"))
 }
+
