@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 
-This repository contains abundance estimate data for marine species, organized in a legacy Excel-based structure.
+This repository contains abundance estimate data for marine species, organised in a legacy Excel-based structure.
 
 ---
 
@@ -35,12 +35,6 @@ The Excel files also contain additional worksheets for:
 - 📈 **Full time series** – linked to certain records
 - 📚 **References** – source documentation
 - 🧮 **Combined abundance calculations** – aggregating strata from the same survey or other scientific committee requests
-
----
-
-## ⚠️ Important Disclaimer
-
-> **These are working files** and may differ from officially published data. They reflect ongoing calculations and internal processing rather than final, peer-reviewed outputs.
 
 ---
 
