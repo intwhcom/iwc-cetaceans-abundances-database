@@ -4,9 +4,8 @@ readexceloriginals <- function(){
   library(readxl)
   library(dplyr)
   
-  #source("read_excel_sheets_with_types.R")
-  source("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs-Refs/abundances tables db/read_excel_sheets_with_types.R")
-  
+  source("scripts/read_excel_sheets_with_types.R")
+
   # general vectors for all tables ####
   required_sheets <- c("Mi", "Fin", "Hbk", "Sei","Spr", "NArht", "Bow", "Blu", "Other", "SM","Gray", "Brd", "AMi" , "Srht","Bdu","Fpn")#, "Abund-Small"
   # Define required columns and their types
@@ -17,7 +16,7 @@ readexceloriginals <- function(){
   # read in the data for all tables ####
   alldatalist <- list()
   for (i in c('SH','NP','NA')){
-    file_path <- paste0("C:/Users/IsidoraKatara/OneDrive - International Whaling Commission/Abundance-Tabs-Refs/Abund-Masters/",i,"/abundances-",i,".xlsx")
+    file_path <- paste0("data/abundances-",i,".xlsx")
     alldatalist[[i]] <- read_excel_sheets_with_types(file_path, required_columns, col_types,required_sheets)
   }
   
