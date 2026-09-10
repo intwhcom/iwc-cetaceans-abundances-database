@@ -65,22 +65,46 @@ for (stmt in sql_statements) {
 
 #the reference tables - load in R and write in db
 reftabs <- readreftabsdb()
-for (j in names(reftabs)) dbWriteTable(conn, j, reftabs[[j]], row.names = FALSE, append = TRUE)
+reference_tables <- c(
+  "category",
+  "correction",
+  "evaluation",
+  "method",
+  "regions",
+  "species",
+  "survey",
+  "trials"
+)
+for (j in reference_tables) dbWriteTable(conn, j, reftabs[[j]], row.names = FALSE, append = TRUE)
 
 #add the subareas reference table which has a geometry and data come from shapefiles
 shapefiles <- c("NA-subareas.shp","SH-subareas.shp","NP-subareas.shp")
 
 spatial_data <- list()
 for (shp_file in shapefiles) spatial_data[[shp_file]] <- st_read(shp_file) %>%
+  st_transform(4326) %>%
   group_by(subareas, accuracy, source, species, large_area, survey) %>%
   summarise(geometry = st_union(geometry), .groups = "drop")
 
-insubareas <-  as.data.frame(do.call(rbind,spatial_data)) %>% mutate(id = row_number()) %>% select(id, subareas, accuracy ,source ,geometry , species, large_area, survey) %>% rename_with(~ c("id", 'subarea', 'accuracy', 'source', 'geometry', 'species_code', 'regions_code', "survey_programme"))# change select the columns and change names (to delete this: need to change the original names when the subareas are made!!!!!)
+insubareas <- do.call(rbind, spatial_data) %>% 
+  mutate(id = row_number()) %>% select(id, subareas, accuracy ,source ,geometry , species, large_area, survey) %>% 
+  rename_with(~ c("id", 'subarea', 'accuracy', 'source', 'geometry', 'species_code', 'regions_code', "survey_programme")) # change select the columns and change names (to delete this: need to change the original names when the subareas are made!!!!!)
 
 st_write(insubareas, conn, "subareas", append = TRUE) 
 
 #load the main abundances tables in R and write in db
-abundances <- readexceldb() %>% as.data.frame(do.call(rbind))
+abundances <- readexceldb()
+
+duplicate_abundance_ids <- abundances %>%
+  count(id) %>%
+  filter(n > 1)
+
+if (nrow(duplicate_abundance_ids) > 0) {
+  print(duplicate_abundance_ids)
+  stop(
+    "ERROR: Duplicate abundance record IDs found. Database import stopped."
+  )
+}
 
 abundancesj <- abundances %>% mutate(survey_programme = ifelse(is.na(survey_programme), "NA_placeholder", survey_programme))
 insubareasj <- insubareas %>% mutate(survey_programme = ifelse(is.na(survey_programme), "NA_placeholder", survey_programme))
@@ -91,12 +115,50 @@ abundancesin <- abundancesj %>%
   select(id,year,startyear,endyear,estimate,cv,se,cvav,lci,uci,notes,pl,pu,season,gnull,areacoverage,sd,cvcalc,dateadded,datemodified,regions_code,species_code,category_code,evaluation_extent,subareas_id,timeseries_code) %>%
   mutate(across(c(year, startyear, endyear, estimate, pl,pu,evaluation_extent), as.integer))
 
+# validation before writing to db
+unmatched_subareas <- abundancesj %>%
+  anti_join(
+    insubareasj,
+    by = c(
+      "subareas_subarea" = "subarea",
+      "survey_programme" = "survey_programme",
+      "species_code" = "species_code",
+      "regions_code" = "regions_code"
+    )
+  )
+
+if (nrow(unmatched_subareas) > 0) {
+  print(unmatched_subareas)
+  stop("Some abundance records do not match a subarea.")
+}
+
+# now write the table to the dataset
 dbWriteTable(conn, "iwc_abundances_table", abundancesin, row.names = FALSE, append = TRUE)
 
 #the references (source papers) tables
 sourcerefs <- readsourcerefsdb()
 # the reference table
 insourceref <- sourcerefs %>% select(refid, ref, fullref, iwcref)
+
+#if workbooks with the same refid, insertion fails. test it:
+duplicate_refs <- sourcerefs %>%
+  count(refid) %>%
+  filter(n > 1)
+
+print(duplicate_refs)
+
+#check whether duplicates genuinely contain identical bibliographic data before doing something like:
+
+insourceref <- sourcerefs %>%
+  select(refid, ref, fullref, iwcref) %>%
+  distinct()
+
+if (nrow(duplicate_refs) > 0) {
+  print(duplicate_refs)
+  stop("ERROR: Duplicate refid values found in the references table. Database import stopped.")
+}
+
+#if no errors, write the table
 dbWriteTable(conn, "references", insourceref, row.names = FALSE, append = TRUE)
 
 #the junction table for the references (source papers) tables
@@ -105,10 +167,10 @@ dbWriteTable(conn, "references1", insref, row.names = FALSE, append = TRUE)
 
 #regions and species junction tables
 regions1 <- sourcerefs %>% select(regions_code, refid) %>% 
-  mutate(rgc = strsplit(regions_code, "\\+")) %>% unnest(rgc) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, regions_code = rgc) %>% mutate(id = row_number())
+  mutate(rgc = strsplit(regions_code, "\\+")) %>% unnest(rgc) %>% mutate(rgc = trimws(rgc)) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, regions_code = rgc) %>% mutate(id = row_number())
 dbWriteTable(conn, "regions1", regions1, row.names = FALSE, append = TRUE)
 
-species2 <- sourcerefs %>% select(species_code, refid) %>% mutate(rgc = strsplit(species_code, "\\+")) %>% unnest(rgc) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, species_code = rgc) %>% mutate(id = row_number())
+species2 <- sourcerefs %>% select(species_code, refid) %>% mutate(rgc = strsplit(species_code, "\\+")) %>% unnest(rgc) %>% mutate(rgc = trimws(rgc)) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, species_code = rgc) %>% mutate(id = row_number())
 dbWriteTable(conn, "species2", species2, row.names = FALSE, append = TRUE)
 
 #the correction, method, survey and trials junction tables

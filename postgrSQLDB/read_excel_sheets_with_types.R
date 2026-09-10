@@ -19,8 +19,14 @@ read_excel_sheets_with_types <- function(file_path, required_columns, col_types,
     missing_cols <- setdiff(required_columns, names(df))
     
     if (length(missing_cols) > 0) {
-      warning(paste("Skipping sheet:", sheet, "Missing columns:", paste(missing_cols, collapse = ", ")))
-      next
+      stop(
+        paste(
+          "ERROR: Sheet", sheet,
+          "is missing required columns:",
+          paste(missing_cols, collapse = ", "),
+          "- database import stopped."
+        )
+      )
     }
     
     # Select and reorder columns

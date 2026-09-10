@@ -79,7 +79,7 @@ CREATE TABLE method1 (
 
 -- Table: references
 CREATE TABLE "references" (
-    refid varchar(50)  NOT NULL,
+    refid varchar(250)  NOT NULL,
     ref varchar(250)  NOT NULL,
     fullref text  NOT NULL,
     iwcref varchar(150)  NULL,
@@ -134,7 +134,7 @@ CREATE TABLE subareas (
     subarea varchar(250)  NOT NULL,
     accuracy varchar(250)  NOT NULL,
     source text  NOT NULL,
-    geometry geometry  NOT NULL,
+    geometry geometry(Geometry, 4326)  NOT NULL,
     species_code varchar(30)  NOT NULL,
     regions_code varchar(4)  NOT NULL,
     survey_programme varchar(250)  NULL,
