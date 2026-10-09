@@ -1,2 +1,0 @@
-Norwegian SMAs shapefile. It contains the SMAs (ES, EB, …) and they are subdivided in blocks (ES1, ES2, …), which are the survey blocks used in the last whale surveys. 
-The shapefile was made by Institute of Marine Research (IMR), Norway.
