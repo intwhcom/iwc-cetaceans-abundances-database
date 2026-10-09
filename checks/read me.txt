@@ -1,1 +1,0 @@
-This folder contains R scripts that check that the reference tables include all the values foind in the main tables.
