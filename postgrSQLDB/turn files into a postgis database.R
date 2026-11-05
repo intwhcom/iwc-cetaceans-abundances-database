@@ -1,13 +1,13 @@
 # Load required packages
 library(RPostgres)  # PostgreSQL connection
 library(DBI)        # Database interface
-library(readxl)     # Reading Excel files
 library(sf)         # Spatial data handling
 library(tidyverse)
+
 sf::sf_use_s2(FALSE)
-#source functions:
-source("read_excel_tables.R")
-source("junction tables.R")
+
+# source functions
+source("postgrSQLDB/junction tables.R")
 
 # Database connection details
 db_name <- "iwcabundances"
@@ -26,10 +26,10 @@ conn_admin <- dbConnect(
   port = db_port
 )
 
-# Create database (if not exists)
+# Recreate database
 dbExecute(conn_admin, paste0("DROP DATABASE IF EXISTS ", db_name))
 dbExecute(conn_admin, paste0("CREATE DATABASE ", db_name))
-dbDisconnect(conn_admin)  # Disconnect admin connection
+dbDisconnect(conn_admin)
 
 # Connect to the newly created database
 conn <- dbConnect(
@@ -44,27 +44,29 @@ conn <- dbConnect(
 # Enable PostGIS extension
 dbExecute(conn, "CREATE EXTENSION IF NOT EXISTS postgis")
 
-# Read and execute SQL file
-sql_file <- "iwc_abundances_table_create.sql"
+# Read and execute SQL schema
+sql_file <- "postgrSQLDB/iwc_abundances_table_create.sql"
 sql_text <- readLines(sql_file, warn = FALSE)
 
 # Remove full-line and inline SQL comments
-sql_text <- gsub("--.*", "", sql_text)  # Remove inline comments
-sql_text <- paste(sql_text, collapse = "\n")  # Preserve multi-line queries
+sql_text <- gsub("--.*", "", sql_text)
+sql_text <- paste(sql_text, collapse = "\n")
 
-# Split SQL statements correctly by semicolon but keep multi-line statements intact
+# Split SQL statements by semicolon while retaining multi-line statements
 sql_statements <- unlist(strsplit(sql_text, ";[[:space:]]*\n", perl = TRUE))
+
 for (stmt in sql_statements) {
   stmt <- trimws(stmt)
-  if (nchar(stmt) > 0) {  # Execute only non-empty statements
+  if (nchar(stmt) > 0) {
     dbExecute(conn, stmt)
   }
 }
 
-#### Load and write data - Excel and shapefiles ####
 
-#the reference tables - load in R and write in db
-reftabs <- readreftabsdb()
+# ---------------------------------------------------------------------------
+# Reference tables
+# ---------------------------------------------------------------------------
+
 reference_tables <- c(
   "category",
   "correction",
@@ -75,25 +77,140 @@ reference_tables <- c(
   "survey",
   "trials"
 )
-for (j in reference_tables) dbWriteTable(conn, j, reftabs[[j]], row.names = FALSE, append = TRUE)
 
-#add the subareas reference table which has a geometry and data come from shapefiles
-shapefiles <- c("NA-subareas.shp","SH-subareas.shp","NP-subareas.shp")
+reftabs <- list()
 
-spatial_data <- list()
-for (shp_file in shapefiles) spatial_data[[shp_file]] <- st_read(shp_file) %>%
-  st_transform(4326) %>%
-  group_by(subareas, accuracy, source, species, large_area, survey) %>%
-  summarise(geometry = st_union(geometry), .groups = "drop")
+for (j in reference_tables) {
 
-insubareas <- do.call(rbind, spatial_data) %>% 
-  mutate(id = row_number()) %>% select(id, subareas, accuracy ,source ,geometry , species, large_area, survey) %>% 
-  rename_with(~ c("id", 'subarea', 'accuracy', 'source', 'geometry', 'species_code', 'regions_code', "survey_programme")) # change select the columns and change names (to delete this: need to change the original names when the subareas are made!!!!!)
+  intable <- read.csv(
+    file = paste0("tables/outputs/reference_tables/", j, ".csv"),
+    stringsAsFactors = FALSE,
+    na.strings = ""
+  )
 
-st_write(insubareas, conn, "subareas", append = TRUE) 
+  # retain in R for creation/validation of junction tables
+  reftabs[[j]] <- intable
 
-#load the main abundances tables in R and write in db
-abundances <- readexceldb()
+  DBI::dbWriteTable(
+    conn,
+    j,
+    intable,
+    row.names = FALSE,
+    append = TRUE
+  )
+}
+
+
+# ---------------------------------------------------------------------------
+# Spatial subareas
+# ---------------------------------------------------------------------------
+
+subareas <- sf::st_read(
+  "subareas/subareas.shp",
+  quiet = TRUE
+)
+
+if (sf::st_crs(subareas)$epsg != 4326) {
+  subareas <- sf::st_transform(subareas, 4326)
+}
+
+# Standardise names while retaining every original polygon feature.
+# Separate polygon features are deliberately retained, including features on
+# opposite sides of longitude 180.
+subareas_source <- subareas %>%
+  select(
+    subareas,
+    accuracy,
+    source,
+    geometry,
+    species,
+    large_area,
+    survey
+  ) %>%
+  rename(
+    subarea = subareas,
+    species_code = species,
+    regions_code = large_area,
+    survey_programme = survey
+  )
+
+# Create one logical subarea record for each unique combination used to match
+# abundance records to their spatial definition. The combined survey string is
+# retained only in this R lookup object; survey relationships are normalised in
+# the PostgreSQL subareas_survey junction table.
+subareas_lookup <- subareas_source %>%
+  sf::st_drop_geometry() %>%
+  select(
+    subarea,
+    species_code,
+    regions_code,
+    survey_programme
+  ) %>%
+  distinct() %>%
+  mutate(id = row_number()) %>%
+  select(
+    id,
+    subarea,
+    species_code,
+    regions_code,
+    survey_programme
+  )
+
+# PostgreSQL subareas table: one row per logical subarea.
+# survey_programme is not stored here because the survey relationship is held
+# in subareas_survey.
+insubareas <- subareas_lookup %>%
+  select(
+    id,
+    subarea,
+    species_code,
+    regions_code
+  )
+
+DBI::dbWriteTable(
+  conn,
+  "subareas",
+  insubareas,
+  row.names = FALSE,
+  append = TRUE
+)
+
+# Build and write subarea-related relational tables.
+subareas_survey <- subareas_survey_f(
+  subareas_lookup = subareas_lookup,
+  survey_ref = reftabs$survey
+)
+
+DBI::dbWriteTable(
+  conn,
+  "subareas_survey",
+  subareas_survey,
+  row.names = FALSE,
+  append = TRUE
+)
+
+subareas_geometry <- subareas_geometry_f(
+  subareas_source = subareas_source,
+  subareas_lookup = subareas_lookup
+)
+
+sf::st_write(
+  subareas_geometry,
+  conn,
+  "subareas_geometry",
+  append = TRUE
+)
+
+
+# ---------------------------------------------------------------------------
+# Main abundance table
+# ---------------------------------------------------------------------------
+
+abundances <- read.csv(
+  "tables/outputs/main_abundances_table.csv",
+  stringsAsFactors = FALSE,
+  na.strings = ""
+)
 
 duplicate_abundance_ids <- abundances %>%
   count(id) %>%
@@ -106,22 +223,33 @@ if (nrow(duplicate_abundance_ids) > 0) {
   )
 }
 
-abundancesj <- abundances %>% mutate(survey_programme = ifelse(is.na(survey_programme), "NA_placeholder", survey_programme))
-insubareasj <- insubareas %>% mutate(survey_programme = ifelse(is.na(survey_programme), "NA_placeholder", survey_programme))
+# Use a temporary matching key for missing survey values. The placeholder is
+# used only in R and is never written to the database.
+abundancesj <- abundances %>%
+  mutate(
+    survey_match = ifelse(
+      is.na(survey_programme),
+      "NA_placeholder",
+      survey_programme
+    )
+  )
 
-abundancesin <- abundancesj %>%
-  left_join(insubareasj, by = c("subareas_subarea" = "subarea", "survey_programme" = "survey_programme", "species_code" = "species_code", "regions_code" = "regions_code")) %>%
-  rename(id = "id.x", subareas_id = "id.y") %>% 
-  select(id,year,startyear,endyear,estimate,cv,se,cvav,lci,uci,notes,pl,pu,season,gnull,areacoverage,sd,cvcalc,dateadded,datemodified,regions_code,species_code,category_code,evaluation_extent,subareas_id,timeseries_code) %>%
-  mutate(across(c(year, startyear, endyear, estimate, pl,pu,evaluation_extent), as.integer))
+subareas_lookup_j <- subareas_lookup %>%
+  mutate(
+    survey_match = ifelse(
+      is.na(survey_programme),
+      "NA_placeholder",
+      survey_programme
+    )
+  )
 
-# validation before writing to db
+# Validate that every abundance record has a logical subarea match.
 unmatched_subareas <- abundancesj %>%
   anti_join(
-    insubareasj,
+    subareas_lookup_j,
     by = c(
       "subareas_subarea" = "subarea",
-      "survey_programme" = "survey_programme",
+      "survey_match" = "survey_match",
       "species_code" = "species_code",
       "regions_code" = "regions_code"
     )
@@ -129,63 +257,213 @@ unmatched_subareas <- abundancesj %>%
 
 if (nrow(unmatched_subareas) > 0) {
   print(unmatched_subareas)
-  stop("Some abundance records do not match a subarea.")
+  stop("ERROR: Some abundance records do not match a logical subarea.")
 }
 
-# now write the table to the dataset
-dbWriteTable(conn, "iwc_abundances_table", abundancesin, row.names = FALSE, append = TRUE)
+# Join the stable logical subarea ID to each abundance record.
+abundancesin <- abundancesj %>%
+  left_join(
+    subareas_lookup_j %>%
+      select(
+        subareas_id = id,
+        subarea,
+        species_code,
+        regions_code,
+        survey_match
+      ),
+    by = c(
+      "subareas_subarea" = "subarea",
+      "survey_match" = "survey_match",
+      "species_code" = "species_code",
+      "regions_code" = "regions_code"
+    ),
+    relationship = "many-to-one"
+  )
 
-#the references (source papers) tables
-sourcerefs <- readsourcerefsdb()
-# the reference table
-insourceref <- sourcerefs %>% select(refid, ref, fullref, iwcref)
+# Defensive check: spatial lookup must not duplicate abundance records.
+duplicate_joined_ids <- abundancesin %>%
+  count(id) %>%
+  filter(n > 1)
 
-#if workbooks with the same refid, insertion fails. test it:
+if (nrow(duplicate_joined_ids) > 0) {
+  print(duplicate_joined_ids)
+  stop(
+    "ERROR: Spatial matching created duplicate abundance records. Database import stopped."
+  )
+}
+
+abundancesin <- abundancesin %>%
+  select(
+    id,
+    year,
+    startyear,
+    endyear,
+    estimate,
+    cv,
+    se,
+    cvav,
+    lci,
+    uci,
+    notes,
+    pl,
+    pu,
+    season,
+    gnull,
+    areacoverage,
+    sd,
+    cvcalc,
+    dateadded,
+    datemodified,
+    regions_code,
+    species_code,
+    category_code,
+    evaluation_extent,
+    subareas_id,
+    timeseries_code
+  ) %>%
+  mutate(
+    across(
+      c(
+        year,
+        startyear,
+        endyear,
+        pl,
+        pu,
+        evaluation_extent
+      ),
+      as.integer
+    )
+  )
+
+DBI::dbWriteTable(
+  conn,
+  "iwc_abundances_table",
+  abundancesin,
+  row.names = FALSE,
+  append = TRUE
+)
+
+
+# ---------------------------------------------------------------------------
+# Literature references and their junction tables
+# ---------------------------------------------------------------------------
+
+sourcerefs <- read.csv(
+  "tables/outputs/literature_references.csv",
+  stringsAsFactors = FALSE,
+  na.strings = ""
+)
+
 duplicate_refs <- sourcerefs %>%
   count(refid) %>%
   filter(n > 1)
 
-print(duplicate_refs)
-
-#check whether duplicates genuinely contain identical bibliographic data before doing something like:
+if (nrow(duplicate_refs) > 0) {
+  print(duplicate_refs)
+  stop(
+    "ERROR: Duplicate refid values found in the references table. Database import stopped."
+  )
+}
 
 insourceref <- sourcerefs %>%
   select(refid, ref, fullref, iwcref) %>%
   distinct()
 
-if (nrow(duplicate_refs) > 0) {
-  print(duplicate_refs)
-  stop("ERROR: Duplicate refid values found in the references table. Database import stopped.")
+DBI::dbWriteTable(
+  conn,
+  "references",
+  insourceref,
+  row.names = FALSE,
+  append = TRUE
+)
+
+# references1
+insref <- refs_f(
+  mainref = abundances,
+  reftab = sourcerefs
+)
+
+DBI::dbWriteTable(
+  conn,
+  "references1",
+  insref,
+  row.names = FALSE,
+  append = TRUE
+)
+
+# regions1
+regions1 <- regions1_f(sourcerefs)
+
+DBI::dbWriteTable(
+  conn,
+  "regions1",
+  regions1,
+  row.names = FALSE,
+  append = TRUE
+)
+
+# species2
+species2 <- species2_f(sourcerefs)
+
+DBI::dbWriteTable(
+  conn,
+  "species2",
+  species2,
+  row.names = FALSE,
+  append = TRUE
+)
+
+# correction1, method1, survey1 and trials1
+for (i in c("correction", "method", "survey", "trials")) {
+
+  jreftabs <- inter_f(
+    mainref = abundances,
+    refcode = paste0(i, "_", colnames(reftabs[[i]])[1])
+  )
+
+  DBI::dbWriteTable(
+    conn,
+    paste0(i, "1"),
+    jreftabs,
+    row.names = FALSE,
+    append = TRUE
+  )
 }
 
-#if no errors, write the table
-dbWriteTable(conn, "references", insourceref, row.names = FALSE, append = TRUE)
 
-#the junction table for the references (source papers) tables
-insref <- refs_f(mainref = abundances,reftab = sourcerefs)
-dbWriteTable(conn, "references1", insref, row.names = FALSE, append = TRUE)
+# ---------------------------------------------------------------------------
+# Time-series tables
+# ---------------------------------------------------------------------------
 
-#regions and species junction tables
-regions1 <- sourcerefs %>% select(regions_code, refid) %>% 
-  mutate(rgc = strsplit(regions_code, "\\+")) %>% unnest(rgc) %>% mutate(rgc = trimws(rgc)) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, regions_code = rgc) %>% mutate(id = row_number())
-dbWriteTable(conn, "regions1", regions1, row.names = FALSE, append = TRUE)
+timeseries <- read.csv(
+  "tables/outputs/timeseries.csv",
+  stringsAsFactors = FALSE,
+  na.strings = ""
+)
 
-species2 <- sourcerefs %>% select(species_code, refid) %>% mutate(rgc = strsplit(species_code, "\\+")) %>% unnest(rgc) %>% mutate(rgc = trimws(rgc)) %>% select(rgc, refid) %>% distinct() %>% rename(references_refid = refid, species_code = rgc) %>% mutate(id = row_number())
-dbWriteTable(conn, "species2", species2, row.names = FALSE, append = TRUE)
+timeseries1 <- read.csv(
+  "tables/outputs/timeseries1.csv",
+  stringsAsFactors = FALSE,
+  na.strings = ""
+)
 
-#the correction, method, survey and trials junction tables
-for (i in c('correction', 'method', 'survey', 'trials')) {
-  jreftabs <- inter_f(mainref=abundances,refcode=paste0(i,"_",colnames(reftabs[[i]][1])))
-  dbWriteTable(conn, paste0(i,"1"), jreftabs, row.names = FALSE, append = TRUE)
-  }
+DBI::dbWriteTable(
+  conn,
+  "timeseries",
+  timeseries,
+  row.names = FALSE,
+  append = TRUE
+)
 
-#the time series tables
-source("timeseries_tables.R")
-tstabs <- tstables(abundances)
-dbWriteTable(conn, "timeseries", tstabs$timeseries, row.names = FALSE, append = TRUE)
-dbWriteTable(conn, "timeseries1", tstabs$junction_table, row.names = FALSE, append = TRUE)
+DBI::dbWriteTable(
+  conn,
+  "timeseries1",
+  timeseries1,
+  row.names = FALSE,
+  append = TRUE
+)
+
 # Close the database connection
 dbDisconnect(conn)
 
-# Print success message
 cat("Database setup and data import completed successfully!\n")

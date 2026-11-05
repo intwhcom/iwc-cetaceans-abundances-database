@@ -4,7 +4,7 @@
 -- tables
 -- Table: category
 CREATE TABLE category (
-    code varchar(4)  NOT NULL,
+    code varchar(6)  NOT NULL,
     description text  NOT NULL,
     CONSTRAINT category_pk PRIMARY KEY (code)
 );
@@ -37,7 +37,7 @@ CREATE TABLE iwc_abundances_table (
     year int  NULL,
     startyear int  NULL,
     endyear int  NULL,
-    estimate int  NOT NULL,
+    estimate real  NOT NULL,
     cv real  NULL,
     se real  NULL,
     cvav real  NULL,
@@ -55,7 +55,7 @@ CREATE TABLE iwc_abundances_table (
     datemodified date  NULL,
     regions_code varchar(4)  NOT NULL,
     species_code varchar(30)  NOT NULL,
-    category_code varchar(4)  NULL,
+    category_code varchar(6)  NULL,
     evaluation_extent int  NULL,
     subareas_id int  NOT NULL,
     timeseries_code varchar(250)  NULL,
@@ -129,16 +129,26 @@ CREATE TABLE species2 (
 );
 
 -- Table: subareas
+-- One row per logical subarea. Individual polygon features are stored
+-- separately in subareas_geometry.
 CREATE TABLE subareas (
-    id int  NOT NULL,
-    subarea varchar(250)  NOT NULL,
-    accuracy varchar(250)  NOT NULL,
-    source text  NOT NULL,
-    geometry geometry(Geometry, 4326)  NOT NULL,
-    species_code varchar(30)  NOT NULL,
-    regions_code varchar(4)  NOT NULL,
-    survey_programme varchar(250)  NULL,
+    id int NOT NULL,
+    subarea varchar(250) NOT NULL,
+    species_code varchar(30) NOT NULL,
+    regions_code varchar(4) NOT NULL,
     CONSTRAINT subareas_pk PRIMARY KEY (id)
+);
+
+-- Table: subareas_geometry
+-- One or more individual polygon features may belong to one logical subarea.
+-- Geometries are deliberately not dissolved into MULTIPOLYGONs.
+CREATE TABLE subareas_geometry (
+    id int NOT NULL,
+    subareas_id int NOT NULL,
+    accuracy varchar(250) NOT NULL,
+    source text NOT NULL,
+    geometry geometry(Geometry, 4326) NOT NULL,
+    CONSTRAINT subareas_geometry_pk PRIMARY KEY (id)
 );
 
 -- Table: survey
@@ -156,11 +166,19 @@ CREATE TABLE survey1 (
     CONSTRAINT survey1_pk PRIMARY KEY (id)
 );
 
+-- Table: subareas_survey
+CREATE TABLE subareas_survey (
+    subareas_id int NOT NULL,
+    survey_programme varchar(250) NOT NULL,
+    id int NOT NULL,
+    CONSTRAINT subareas_survey_pk PRIMARY KEY (id)
+);
+
 -- Table: timeseries
 CREATE TABLE timeseries (
-    id int  NOT NULL,
+    id varchar(50)  NOT NULL,
     code varchar(10)  NOT NULL,
-    estimate int  NOT NULL,
+    estimate real  NOT NULL,
     cv real  NULL,
     se real  NULL,
     sd real  NULL,
@@ -174,7 +192,7 @@ CREATE TABLE timeseries (
 -- Table: timeseries1
 CREATE TABLE timeseries1 (
     iwc_abundances_table_id varchar(50)  NOT NULL,
-    timeseries_id int  NOT NULL,
+    timeseries_id varchar(50)  NOT NULL,
     id int  NOT NULL,
     CONSTRAINT timeseries1_pk PRIMARY KEY (id)
 );
@@ -323,6 +341,28 @@ ALTER TABLE subareas ADD CONSTRAINT subareas_regions
     INITIALLY IMMEDIATE
 ;
 
+-- Reference: subareas_geometry_subareas (table: subareas_geometry)
+ALTER TABLE subareas_geometry ADD CONSTRAINT subareas_geometry_subareas
+    FOREIGN KEY (subareas_id)
+    REFERENCES subareas (id)
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
+;
+
+ALTER TABLE subareas_survey
+ADD CONSTRAINT subareas_survey_subareas
+    FOREIGN KEY (subareas_id)
+    REFERENCES subareas (id);
+
+ALTER TABLE subareas_survey
+ADD CONSTRAINT subareas_survey_survey
+    FOREIGN KEY (survey_programme)
+    REFERENCES survey (programme);
+    
+ALTER TABLE subareas_survey
+ADD CONSTRAINT subareas_survey_unique
+    UNIQUE (subareas_id, survey_programme);
+    
 -- Reference: subareas_species (table: subareas)
 ALTER TABLE subareas ADD CONSTRAINT subareas_species
     FOREIGN KEY (species_code)
@@ -330,13 +370,14 @@ ALTER TABLE subareas ADD CONSTRAINT subareas_species
     NOT DEFERRABLE 
     INITIALLY IMMEDIATE
 ;
+
 -- Reference: subareas_surveys (table: subareas)
-ALTER TABLE subareas ADD CONSTRAINT subareas_survey
-    FOREIGN KEY (survey_programme)
-    REFERENCES survey (programme)  
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE
-;
+--ALTER TABLE subareas ADD CONSTRAINT subareas_survey
+--    FOREIGN KEY (survey_programme)
+--    REFERENCES survey (programme)  
+--    NOT DEFERRABLE 
+--    INITIALLY IMMEDIATE
+--;
 
 -- Reference: survey1_iwc_abundances_table (table: survey1)
 ALTER TABLE survey1 ADD CONSTRAINT survey1_iwc_abundances_table
