@@ -2,7 +2,7 @@
 
 This folder contains the R scripts used to validate the intermediate tabular and spatial components of the IWC cetacean abundance database.
 
-The checks are run **after the intermediate tables have been assembled**. They identify structural inconsistencies, invalid coded values, invalid or inconsistent record-level values, unresolved literature references and abundance records without a matching spatial subarea record.These checks form part of the quality-assurance workflow; the intermediate objects should not be treated as final release-ready data until the checks and any subsequent QA steps have been completed.
+The checks are run **after the intermediate tables have been assembled**. They identify structural inconsistencies, invalid coded values, unresolved literature references and abundance records without a matching spatial subarea record. These checks form part of the quality-assurance workflow; the intermediate objects should not be treated as final release-ready data until the checks and any subsequent QA steps have been completed.
 
 ## Required objects
 
@@ -101,30 +101,6 @@ The spatial layer is expected to contain the fields:
 
 By default, the check does not write a CSV. If the function is run with `writecsv = TRUE`, the unmatched combinations can be written to file.
 
-### `check_main_table_values.R`
-
-Checks record identifiers and selected numeric, temporal and date values in `main_abundances_table`.
-
-The checks include:
-
-- `id` is present, unique and follows the expected `large area-species-4 digit number` pattern (e.g. `NA-Fin-0001`);
-- the large-area and species components of `id` agree with `regions_code` and `species_code`;
-- `estimate` is present and is either `-1` or a positive number;
-- `se`, `lci`, `uci`, `pl` and `pu`, when present, are positive numbers;
-- `cv`, when present, is between 0 and 1;
-- `year`, `startyear` and `endyear`, when present, are integer years from 1960 to the current year;
-- each record contains either `year`, or both `startyear` and `endyear`;
-- `startyear <= endyear`;
-- `lci <= estimate <= uci` when both confidence limits are available;
-- `pl <= pu` when both values are available;
-- `dateadded` and `datemodified` are stored as dates.
-
-ID numbers are not required to be consecutive. Once assigned, an ID should remain associated with the same record.
-
-**Input:** `main_abundances_table`
-
-**Output:** a list containing the overall pass/fail result and data frames identifying records that fail each check.
-
 ### `run_table_checks.R`
 
 Sources the individual checking functions and runs all checks together.
@@ -139,6 +115,7 @@ First create the intermediate tables:
 source("tables/scripts/build_main_table.R")
 source("tables/scripts/read_literature_refs.R")
 source("tables/scripts/read_reference_tables.R")
+source("tables/scripts/timeseries_tables.R")
 ```
 
 Define the spatial input:
@@ -156,7 +133,8 @@ check_results <- run_table_checks(
   main_abundances_table = main_abundances_table,
   literature_references = literature_references,
   reference_tables = reference_tables,
-  shapefile_path = shapefile_path
+  timeseries_tables = timeseries_tables,
+  shapefile_path = "subareas/subareas.shp"
 )
 ```
 
@@ -170,7 +148,7 @@ check_results$reference_values
 check_results$missing_reference_ids
 check_results$reference_combination_issues
 check_results$missing_subareanames
-check_results$main_table_values
+check_results$timeseries
 ```
 
 For checks that return data frames, **zero rows means that no unmatched records were found**.
@@ -181,19 +159,6 @@ For the coded reference checks, individual results can be inspected, for example
 check_results$reference_values$species
 check_results$reference_values$method
 check_results$reference_values$survey
-check_results$main_table_values$passed
-check_results$main_table_values$duplicate_ids
-check_results$main_table_values$invalid_id_pattern
-check_results$main_table_values$id_component_mismatches
-check_results$main_table_values$estimate_issues
-check_results$main_table_values$positive_value_issues
-check_results$main_table_values$year_issues
-check_results$main_table_values$year_presence_issues
-check_results$main_table_values$year_order_issues
-check_results$main_table_values$confidence_interval_issues
-check_results$main_table_values$percentile_limit_issues
-check_results$main_table_values$cv_issues
-check_results$main_table_values$date_type_issues
 ```
 
 ## Notes
