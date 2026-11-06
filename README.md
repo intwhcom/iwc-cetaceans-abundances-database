@@ -262,9 +262,9 @@ The app is part of the dissemination layer of the project: it provides a user-fa
 
 The application will be deployed as an **R Shiny web application**.
 
-- **Web application:** _[R Shiny deployment URL to be added]_
+- **Web application:** _[https://isidorakatara.shinyapps.io/whales-abundances-view/]_
 
-Technical instructions for running or deploying the application should be documented within the `view-abundances-whales/` folder.
+Technical instructions for running or deploying the application are documented within the `view-abundances-whales/` folder.
 
 ## Contributors and scientific use
 
@@ -296,7 +296,7 @@ This GitHub repository is the **development and reproducibility repository**. It
 
 Versioned archival releases of the database should be deposited in **Zenodo** and used as the citable, persistent data releases.
 
-- **Zenodo release:** _[Zenodo DOI / release URL to be added]_
+- **Zenodo release:** _[10.5281/zenodo.24002558]_
 
 The two platforms therefore serve different purposes:
 
@@ -319,5 +319,5 @@ For the interactive data viewer, see `view-abundances-whales/`.
 External resources:
 
 - **Subareas construction repository:** https://github.com/intwhcom/iwc-cetaceans-abundances-subareas
-- **Zenodo release:** _[Zenodo DOI / release URL to be added]_
-- **R Shiny web application:** _[R Shiny deployment URL to be added]_
+- **Zenodo release:** _[10.5281/zenodo.24002558]_
+- **R Shiny web application:** _[https://isidorakatara.shinyapps.io/whales-abundances-view/]_
