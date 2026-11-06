@@ -1,4 +1,4 @@
-# Abundance Estimates Database
+# Abundance Estimates Database - Legacy data
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
