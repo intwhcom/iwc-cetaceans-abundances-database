@@ -12,7 +12,7 @@ The app uses the consolidated, quality-controlled outputs held elsewhere in this
 
 - [`tables/outputs/main_abundances_table.csv`](https://github.com/intwhcom/iwc-cetaceans-abundances-database/tree/main/tables/outputs/main_abundances_table.csv) — consolidated abundance estimates and associated metadata.
 - [`tables/outputs/literature_references.csv`](https://github.com/intwhcom/iwc-cetaceans-abundances-database/tree/main/tables/outputs/literature_references.csv) — literature references linked to the abundance records.
-- [`subareas/subareas.shp`](10.5281/zenodo.24002558) — spatial subareas used by the viewer. The associated shapefile components (`.dbf`, `.shx`, `.prj`, and `.cpg` where present) are held in the same folder.
+- `subareas.shp` (10.5281/zenodo.24002558) — spatial subareas used by the viewer. The associated shapefile components (`.dbf`, `.shx`, `.prj`, and `.cpg` where present) are held in the same zip file.
 
 The full set of release tables, reference tables and time-series outputs is available under [`tables/outputs/`](https://github.com/intwhcom/iwc-cetaceans-abundances-database/tree/main/tables/outputs/).
 
