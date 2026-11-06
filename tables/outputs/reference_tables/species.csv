@@ -1,0 +1,98 @@
+"code","faocode","scientificname","commonname","alternativename","iucn"
+"Ablu",,"Balaenoptera musculus musculus (Linnaeus, 1758)","Antarctic Blue","Blue","Endangered"
+"AMi","BFW","Balaenoptera bonaerensis Burmeister, 1867","Antarctic minke",,"Near Threatened"
+"AmRv","BOT","Inia geoffrensis (Blainville, 1817)","Amazon river dolphin",,
+"AnBeab","BDW","Mesoplodon bowdoini Andrews, 1908","Andrews' beaked whale",,"Data Deficient"
+"Arnou","BAW","Berardius arnuxii Duvernoy, 1851","Arnoux's beaked whale",,
+"AtHmpD","DHA","Sousa teuszii (Kükenthal, 1892)","Atlantic humpback dolphin",,"Critically Endangered"
+"AtSpottes","DSA","Stenella frontalis (G. Cuvier, 1829)","Atlantic spotted dolphin",,"Least Concern"
+"AuHumpbacn","QPV","Sousa sahulensis Jefferson and Rosenbaum, 2014","Australian humpback dolphin",,"Vulnerable"
+"AuSnubfin","IDB","Orcaella heinsohni Beasley, Robertson and Arnold, 2005","Australian snubfin dolphin",,
+"Awdol","DWH","Lagenorhynchus acutus (Gray, 1828)","Atlantic white-sided dolphin",,
+"Bai","BEW","Berardius bairdii Stejneger, 1883","Baird's beaked whale",,
+"Bdu","BEL","Delphinapterus leucas (Pallas, 1776)","Beluga","white whale","Least Concern"
+"BlBeae","BBW","Mesoplodon densirostris (Blainville, 1817)","Blainville's beaked whale",,"Least Concern"
+"Blj","BJI","Lipotes vexillifer Miller, 1918","Baiji","Yangtze river dolphin",
+"Blu","BLW","Balaenoptera musculus (Linnaeus, 1758)","Blue whale",,"Endangered"
+"Bow","BMY","Balaena mysticetus Linnaeus, 1758","Bowhead","Greenland whale","Least Concern"
+"Brd","BRW","Balaenoptera edeni Anderson, 1879","Bryde's",,"Least Concern"
+"Bup","BRP","Phocoena spinipinnis Burmeister, 1865","Burmeister's porpoise",,"Near Threatened"
+"Chdol","CHD","Cephalorhynchus eutropia (Gray, 1846)","Chilean dolphin",,"Near Threatened"
+"Clydol","DCL","Stenella clymene (Gray, 1850)","Clymene dolphin",,"Least Concern"
+"CoBt","DBO","Tursiops truncatus (Montagu, 1821)","Common bottlenose dolphin",,"Least Concern"
+"Codol","DCO","Delphinus delphis Linnaeus, 1758","Common dolphin",,"Least Concern"
+"Comm","CMD","Cephalorhynchus commersonii (Lacépède, 1804)","Commerson's dolphin",,"Least Concern"
+"CuBeab","BCW","Ziphius cavirostris G. Cuvier, 1823","Cuvier's beaked whale","goose-beaked whale","Least Concern"
+"Dalp","PDA","Phocoenoides dalli (True, 1885)","Dall's porpoise",,"Least Concern"
+"DeBeaa","BZZ","Mesoplodon hotaula Deraniyagala, 1963","Deraniyagala's beaked whale",,
+"Dusdol","DDU","Lagenorhynchus obscurus (Gray, 1828)","Dusky dolphin",,
+"DwSpr","DWW","Kogia sima (Owen, 1866)","Dwarf sperm whale",,"Least Concern"
+"FaKil","FAW","Pseudorca crassidens (Owen, 1846)","False killer whale",,
+"Fin","FIW","Balaenoptera physalus (Linnaeus, 1758)","Fin",,"Vulnerable"
+"Fpn","FRA","Pontoporia blainvillei (Gervais and d'Orbigny, 1844)","Franciscana","toninha","Vulnerable"
+"Frdol","FRD","Lagenodelphis hosei Fraser, 1956","Fraser's dolphin",,"Least Concern"
+"GaRv","GNS","Platanista gangetica (Lebeck, 1801)","Ganges river dolphin","susu","Endangered"
+"Gdol","TZG","Sotalia guianensis (P.J. Van Beneden, 1864)","Guiana dolphin","costero",
+"GeBeab","BGW","Mesoplodon europaeus (Gervais, 1855)","Gervais' beaked whale",,"Least Concern"
+"Gray","GRW","Eschrichtius robustus (Lilljeborg, 1861)","Gray whale","Gray","Least Concern"
+"GrBa","BYW","Mesoplodon grayi von Haast, 1876","Gray's beaked whale",,
+"Hbk","HUW","Megaptera novaeangliae (Borowski, 1781)","Humpback","Humpback whales","Least Concern"
+"Hcd","HCD","Cephalorhynchus hectori (Van Beneden, 1881)","Hector's dolphin",,"Endangered"
+"HeBeab","BHW","Mesoplodon hectori","Hector's beaked whale",,"Data Deficient"
+"Hedol","HVD","Cephalorhynchus heavisidii (Gray, 1828)","Heaviside's dolphin",,"Near Threatened"
+"Hrp","PHR","Phocoena phocoena (Linnaeus, 1758)","Harbor porpoise",,"Least Concern"
+"HuBa","BUW","Mesoplodon carlhubbsi Moore, 1963","Hubbs' beaked whale",,"Data Deficient"
+"HuDol","HRD","Lagenorhynchus cruciger (Quoy and Gaimard, 1824)","Hourglass dolphin",,
+"InRie","BHU","Platanista minor Owen, 1853","Indus river dolphin","bhulan",
+"IOhbk","QPU","Sousa plumbea (G. Cuvier, 1829)","Indian Ocean humpback dolphin",,"Endangered"
+"IPbdol","DBZ","Tursiops aduncus (Ehrenberg, 1833)","Indo-Pacific bottlenose dolphin",,"Near Threatened"
+"Ipfp","PFI","Neophocaena phocaenoides (G. Cuvier, 1829)","Indo-Pacific finless porpoise",,"Vulnerable"
+"IPhbk","DHI","Sousa chinensis (Osbeck, 1765)","Indo-Pacific humpback dolphin",,"Vulnerable"
+"Irr","IRD","Orcaella brevirostris (Owen in Gray, 1866)","Irrawaddy dolphin","pesut",
+"KiWa","KIW","Orcinus orca (Linnaeus, 1758)","Killer whale, orca",,"Data Deficient"
+"LoBea","BNW","Indopacetus pacificus (Longman, 1926)","Longman's beaked whale","tropical bottlenose whale",
+"LPlt","PIW","Globicephala melas (Traill, 1809)","Long-finned pilot whale",,"Least Concern"
+"Maui",,"Cephalorhynchus hectori maui","Maui dolphin",,"Endangered"
+"Megi","TGW","Mesoplodon ginkgodens Nishiwaki and Kamiya, 1958","Ginkgo-toothed beaked whale",,
+"MeHed","MEW","Peponocephala electra (Gray, 1846)","Melon-headed whale",,
+"Mi","MIW","Balaenoptera acutorostrata Lacépède, 1804","Minke","common minke","Least Concern"
+"NArht","EUG","Eubalaena glacialis (Müller, 1776)","North Atlantic right whale","N.Atlantic right","Critically Endangered"
+"Nmw","NAR","Monodon monoceros Linnaeus, 1758","Narwhal",,
+"NoBottlW","BOW","Hyperoodon ampullatus (Forster, 1770)","Northern bottlenose whale",,"Near Threatened"
+"NPrht","EZJ","Eubalaena japonica (Lacépède, 1818)","North Pacific right whale",,"Endangered"
+"NRfip","NEQ","Neophocaena asiaeorientalis (Pilleri and Gihr, 1972)","Narrow-ridged finless porpoise",,"Endangered"
+"Nridol","RNW","Lissodelphis borealis (Peale, 1849)","Northern right-whale dolphin",,"Least Concern"
+"Omu","BXO","Balaenoptera omurai Wada, Oishi and Yamada, 2003","Omura's whale",,"Data Deficient"
+"PaSpottea","DPN","Stenella attenuata (Gray, 1846)","Pantropical spotted dolphin",,"Least Concern"
+"Pblu",,"Balaenoptera musculus brevicauda","Pygmy blue",,"Endangered"
+"PeBeab","ZVT","Mesoplodon perrini Dalebout, Mead, Baker, Baker and van Helden, 2002","Perrin's beaked whale",,"Endangered"
+"Pedol","PLD","Lagenorhynchus australis (Peale, 1849)","Peale's dolphin",,
+"Pwsdol","DWP","Lagenorhynchus obliquidens Gill, 1865","Pacific white-sided dolphin",,
+"PyBek","BPW","Mesoplodon peruvianus Reyes, Mead and Van Waerebeek, 1991","Pygmy beaked whale",,"Least Concern"
+"PyKil","KPW","Feresa attenuata Gray, 1874","Pygmy killer whale",,"Least Concern"
+"PyRht","CPM","Caperea marginata (Gray, 1846)","Pygmy right whale",,"Least Concern"
+"PySpr","PYW","Kogia breviceps (Blainville, 1838)","Pygmy sperm whale",,"Least Concern"
+"RaBeab","ZVS","Mesoplodon eueu Carroll et al. 20214","Ramari's beaked whale",,
+"Ric","ZBB","Balaenoptera ricei Rosel, Wilcox, Yamada and Mullin, 2021","Rice's whale",,"Critically Endangered"
+"Ridol","DRR","Grampus griseus (G. Cuvier, 1812)","Risso's dolphin","grampus","Least Concern"
+"RoTot","RTD","Steno bredanensis (Lesson, 1828)","Rough-toothed dolphin",,
+"Sato","ZFL","Berardius minimus Yamada, Kitamura and Matsuishi, 2019","Sato's beaked whale",,
+"Sbeak","BSW","Tasmacetus shepherdi Oliver, 1937","Shepherd's beaked whale","Tasman's beaked whale",
+"Sei","SIW","Balaenoptera borealis Lesson, 1828","Sei",,"Endangered"
+"SHcd",,"Cephalorhynchus hectori hectori","South Island Hector's dolphin",,"Endangered"
+"SoBea","BWW","Mesoplodon bidens (Sowerby, 1804)","Sowerby's beaked whale",,"Least Concern"
+"SoBottlW","SRW","Hyperoodon planifrons Flower, 1882","Southern bottlenose whale",,"Least Concern"
+"Spdol","DSI","Stenella longirostris (Gray, 1828)","Spinner dolphin",,"Least Concern"
+"SPlt","SHW","Globicephala macrorhynchus Gray, 1846","Short-finned pilot whale",,"Least Concern"
+"Sppo","SPP","Phocoena dioptrica Lahille, 1912","Spectacled porpoise",,"Least Concern"
+"Spr","SPW","Physeter macrocephalus Linnaeus, 1758","Sperm","cachalot","Vulnerable"
+"SpTot","BXT","Mesoplodon traversii (Gray, 1874)","Spade-toothed whale",,"Data Deficient"
+"Srht","EUA","Eubalaena australis (Desmoulins, 1822)","Southern right whale",,"Least Concern"
+"Sridol","RSW","Lissodelphis peronii (Lacépède, 1804)","Southern right-whale dolphin","S. right","Least Concern"
+"StBea'","BJW","Mesoplodon stejnegeri True, 1885","Stejneger's beaked whale",,"Near Threatened"
+"Stpt","TSW","Mesoplodon layardii (Gray, 1865)","Strap-toothed beaked whale","Layard's beaked whale",
+"Strdol","DST","Stenella coeruleoalba (Meyen, 1833)","Striped dolphin",,"Least Concern"
+"TrBa","BTW","Mesoplodon mirus True, 1913","True's beaked whale",,
+"Tsu","TUC","Sotalia fluviatilis (Gervais and Deville in Gervais, 1853)","Tucuxi",,
+"Vqu","VAQ","Phocoena sinus Norris and McFarland, 1958","Vaquita","Gulf of California harbor porpoise","Critically Endangered"
+"WhBek","BWD","Lagenorhynchus albirostris (Gray, 1846)","White-beaked dolphin",,

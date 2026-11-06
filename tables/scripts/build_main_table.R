@@ -27,7 +27,8 @@ for (i in c('SH','NP','NA')){
 }
 
 #final output data frame
-output <- do.call(rbind.data.frame, alldatalist)
+output <- do.call(rbind.data.frame, alldatalist) %>%
+  filter(if_any(everything(), ~ !is.na(.x)))
 return(output)
 }
 

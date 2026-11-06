@@ -7,7 +7,7 @@ read_time_sheets <- function(file_path = "legacy/data/abundances-NP.xlsx") {
     df <- read_excel(file_path, sheet = 'timeseries') %>%
       select(id, code, estimate, cv, se, sd, year, lci, uci, notes) %>% 
       mutate(
-        id = as.integer(id),
+        id = as.character(id),
         estimate = as.integer(estimate),
         year = as.integer(year),
         lci = as.integer(lci),
@@ -21,7 +21,7 @@ read_time_sheets <- function(file_path = "legacy/data/abundances-NP.xlsx") {
 }
 #load the data:
 dt <- list(); for (i in c("legacy/data/abundances-NP.xlsx","legacy/data/abundances-NA.xlsx","legacy/data/abundances-SH.xlsx")) dt[[i]] <- read_time_sheets(file_path = i)
-ddf <- as.data.frame(do.call(rbind,dt)) %>% mutate(id = row_number())
+ddf <- as.data.frame(do.call(rbind,dt))
 
 #the junction table has the iwc_abundances_table_id and the timeseries_id
 # clean codes
